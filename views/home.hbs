@@ -1,0 +1,97 @@
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <title>Home</title>
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor'
+      crossorigin='anonymous'
+    />
+    <link rel='stylesheet' href='public/style/style.css' />
+  </head>
+  <body>
+    <!--Navbar -->
+    <nav class='navbar navbar-expand-lg bg-light'>
+      <div class='container'>
+        <a class='navbar-brand' href='#'><img src='public/images/logo.png' alt='logo' width='40' height='30' /></a>
+        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarNav'>
+          <ul class='navbar-nav'>
+            <li class='nav-item'>
+              <a class='nav-link active' aria-current='page' href='home'>Home</a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='addproject'>Add Project</a>
+            </li>
+          </ul>
+        </div>
+        <div class='contactme'>
+          <a href='contact'><button type='button' class='contactme btn-dark'>Contact Me</button></a>
+        </div>
+      </div>
+    </nav>
+    <!--Profile -->
+    <section class='container2'>
+      <div class='introduction'>
+        <h1 class='text-center'>Hi Welcome to my hut</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+          popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+          Lorem Ipsum.
+        </p>
+        <div class='link'>
+          <a href='contact'><button type='button' class='contactme btn-dark'>Contact Me</button></a>
+          <a href='' class='cv'>Unduh cv<img src='public/images/download.png' alt='cv' width='30' height='30' /></a>
+        </div>
+        <div class='medsos'>
+          <a href='#'>
+            <img src='public/images/linkedin.png' alt='' width='30' height='30' />
+          </a>
+          <a href='https://www.instagram.com/azizfrachman/'>
+            <img src='public/images/instagram.png' alt='' width='30' height='30' />
+          </a>
+          <a href='https://www.facebook.com/aziz.fatkhurohman.9/'>
+            <img src='public/images/facebook.png' alt='' width='30' height='30' />
+          </a>
+          <a href='https://twitter.com/AFatkhurachman'>
+            <img src='public/images/tweet.png' alt='' width='30' height='30' />
+          </a>
+        </div>
+      </div>
+      <div class='profile'>
+        <img src='public/images/20220512_230842-removebg-preview.png' alt='' />
+        <h3 class='text-center'>Aziz Fatkhu Rohman</h3>
+        <p class='text-center'>Web Developer</p>
+      </div>
+    </section>
+    <!-- My project -->
+    <div><h1 class='text-center'>My Project</h1></div>
+    <div class="project">
+    {{#each blog}}
+  <div class="card">
+  <h5 class="card-header">{{this.title}}</h5>
+  <div class="card-body">
+      <img src=".{{this.image}}" alt="image" width="70" height="70">
+    <p>{{this.start}}|{{this.end}}</p>
+    <p> by: {{this.author}} | Post : {{this.createdAt}}</p>
+    <p class="card-text">{{this.description}}</p>
+    <p class="card-text">{{this.CheckedProject}}</p>
+    <a href="/edit/{{@index}}" class="btn btn-primary">EDIT</a>
+    <a href="/delete/{{@index}}" class="btn btn-primary">DELETE</a>
+  </div>
+</div>
+      </div>
+    {{/each}}
+
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'
+      integrity='sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2'
+      crossorigin='anonymous'
+    ></script>
+  </body>
+</html>

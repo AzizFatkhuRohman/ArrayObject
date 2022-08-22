@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="public/style/style.css" />
+    <script src="../public/javascript/contact.js"></script>  
+  </head>
+  <body>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="public/images/logo.png" alt="logo" width="40" height="30" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="addproject">Add Project</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contactme">
+          <a href="contact"><button type="button" class="contactme btn-dark">Contact Me</button></a>
+        </div>
+      </div>
+    </nav>
+    <!--Contact -->
+    <div class="sec-contact">
+      <div class="get">
+        <h1>GET IN TOUCH</h1>
+      </div>
+      <form id="contact">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+          <label for="phone_number">Phone Number</label>
+          <input type="text" id="phone_number" />
+        </div>
+        <div>
+          <label for="subject">subject</label>
+          <select name="subject" id="subject">
+            <option value="null"></option>
+            <option value="1">Lets Talk</option>
+            <option value="2">Lets Colaborate</option>
+            <option value="3">Lets Create Project</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" cols="30" rows="2"></textarea>
+        </div>
+        <button type="submit" class="submit" onclick="getData()">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
